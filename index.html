@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form action="" autocomplete="off" class="form" id="add-node-form">
+      <label for="name">Task</label>
+      <input type="text" id="name" name="name" required />
+      <label for="description">Description</label>
+      <textarea name="description" id="description"></textarea>
+      <label for="type">Task type</label>
+      <select name="type" id="type">
+        <option value="general">General</option>
+        <option value="educational">Educational</option>
+        <option value="administrative">Administrative</option>
+        <option value="coding">Coding</option>
+      </select>
+      <label for="color">Status</label>
+      <select name="color" id="color">
+        <option value="0x000000">To do</option>
+        <option value="0xff0000">Doing</option>
+        <option value="0x888888">Almost Done</option>
+        <option value="0x00ff00">Waiting for review</option>
+      </select>
+      <select name="priority" id="priority">
+        <option value="0">Very low</option>
+        <option value="2">Low</option>
+        <option value="5">Standard</option>
+        <option value="10">High</option>
+        <option value="18">Very high</option>
+      </select>
+      <button id="add-node">Add node</button>
+    </form>
+
+    <div id="tooltip" class="tooltip">
+      <div class="priority" id="tooltip-priority"></div>
+      <span id="tooltip-text"></span>
+
+      <p id="tooltip-status">status: Example</p>
+      <hr />
+      <p id="tooltip-description">This is it</p>
+    </div>
+    <div id="app-container"></div>
+    <script src="pixi.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
